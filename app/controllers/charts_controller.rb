@@ -29,7 +29,7 @@ class ChartsController < ApplicationController
 
   def update
     if @chart.update(chart_params)
-      redirect_to @ chart
+      redirect_to @chart
     else
       render :edit
     end
