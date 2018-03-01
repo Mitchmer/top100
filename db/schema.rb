@@ -31,9 +31,11 @@ ActiveRecord::Schema.define(version: 20180301214500) do
     t.string "title"
     t.integer "sales"
     t.bigint "artist_id"
+    t.bigint "chart_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["artist_id"], name: "index_songs_on_artist_id"
+    t.index ["chart_id"], name: "index_songs_on_chart_id"
   end
 
   add_foreign_key "songs", "artists"
