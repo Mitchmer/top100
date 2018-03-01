@@ -9,20 +9,44 @@ class ChartsController < ApplicationController
   end
 
   def new
-    @charts = Chart.new
+    @chart = Chart.new
   end
 
   def edit
   end
 
-  def update
-    
+  def create
+    @chart= Chart.new(chart_params)
+
+    if @chart.save
+      redirect_to charts_path
+    else
+      render :new
+    end
   end
 
-  def create
+  def update
+    if @chart.update(chart_params)
+      redirect_to @ chart
+    else
+      render :edit
+    end
   end
 
   def destroy
+    @chart.destroy
+    redirect_to charts_path
   end
-  
+
+  private
+
+  def set_chart
+    @chart = Chart.find(params[:id])
+  end
+
+  def chart_params
+    params.require(:chart).permit(:name)
+  end     
+
+
 end
