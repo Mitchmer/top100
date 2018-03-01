@@ -10,9 +10,11 @@ class ChartsController < ApplicationController
 
   def new
     @chart = Chart.new
+    render partial: "form"
   end
 
   def edit
+    render partial: "form"
   end
 
   def create
@@ -46,7 +48,7 @@ class ChartsController < ApplicationController
 
   def chart_params
     params.require(:chart).permit(:name)
-  end     
+  end
 
 
 end
