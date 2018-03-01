@@ -1,1 +1,5 @@
 <h1>Billboard Top 100 - Charts</h1>
+
+<% @charts.each do |chart| %>
+  <%= link_to chart.name, chart_path(chart) %>
+<% end %>
