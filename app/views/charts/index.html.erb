@@ -1,5 +1,8 @@
 <h1>Billboard Top 100 - Charts</h1>
 
+<% @charts.each do |chart| %>
+  <%= link_to chart.name, chart_path(chart) %>
+<% end %>
 
 
 
@@ -28,4 +31,4 @@
   <% end %>
 </div>
 <div class="ui divider"></div>
-<div class="ui button fluid"><%= link_to 'New Chart', new_chart_path %></div>
+<button class="ui button fluid"><%= link_to 'New Chart', new_chart_path %></button>
