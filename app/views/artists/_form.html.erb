@@ -1,6 +1,10 @@
-<%= form_for @artist do |f| %> 
-  <% f.label :name %> 
-  <%= f.text_field :name, required: true, autofocus:true %> 
-  <br /> 
-  <%= f.submit %> 
-<% end %> 
+<%= form_for @artist do |f| %>
+<div class="field">
+  <% f.label :name %>
+  <%= f.text_field :name, required: true, autofocus:true %>
+</div>
+  <br />
+<div class="actions">
+  <%= f.submit 'Disco', class: 'ui button primary' %>
+</div>
+<% end %>
