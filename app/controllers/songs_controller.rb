@@ -11,7 +11,7 @@ class SongsController < ApplicationController
   end
 
   def new
-    @song = @artist.songs.new
+    @song = Artist.Song.new
     render partial: "form"
   end
 
