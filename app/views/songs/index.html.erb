@@ -1,9 +1,21 @@
-<div class="artist">
 
-<h1>Songs</h1>
-<ul>
-  <% @songs.each do |song| %>
-    <li><%= link_to song.title, songs_path(song.id) %></li>
+
+<div class="artist">
+  <h1>Songs</h1>
+
+  <br />
+  <div class="ui divider">
+  
+  <div class="ui divider">
+  <br />
+
+  <div class="ui relaxed divided list">
+    <% @songs.each do |song| %>
+    <div class="item">
+      <div class="content">
+        <li class="header"><%= link_to song.title, songs_path(song.id) %></li>
+      </div>
+    </div>
   <% end %>
-</ul>
+  </div>
 </div>
