@@ -1,0 +1,23 @@
+<div class="artist">
+
+<h1><%= @artist.name %> </h1>
+<hr /> <p>What would you like to do?</p>
+<br />
+<div class="ui primary basic button">
+  <%= link_to 'Edit Artist', edit_artist_path(@artist) %>
+</div>
+
+
+<div class = 'ui primary basic button'>
+   <%= link_to 'Add new song', new_artist_song_path(@artist) %>
+</div>
+
+<div class="ui negative basic button">
+  <%= link_to 'Delete Artist', @artist, method: :delete %>
+</div>
+
+<div class="ui primary basic button">
+
+  <%= link_to 'Back', artists_path%>
+</div>
+</div>

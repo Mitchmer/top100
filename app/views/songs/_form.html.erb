@@ -1,0 +1,27 @@
+#song form
+<div class="song">
+
+  <%= form_for [@artist, @song] do |f| %>
+  <h3> Artist Name here</h3>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, required: true, autofocus:true %>
+  </div>
+    <br />
+    <div class="field">
+    <%= f.label :genre %>
+     <%= f.collection_select :genre, Song.all, :genre, :genre, prompt: true %>
+ 
+    <%= f.text_field :genre %> 
+  </div>
+    <br />
+    <div class="field">
+    <%= f.label :sales %>
+    <%= f.text_field :sales %>
+    </div>
+    <br />
+  <div class="actions">
+    <%= f.submit 'Disco', class: 'ui primary basic button ' %>
+  </div>
+  <% end %>
+</div>

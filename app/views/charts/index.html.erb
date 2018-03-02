@@ -1,0 +1,31 @@
+<div class="artist">
+
+<h1>Billboard Top 100 - Charts</h1>
+
+<div class="ui divider"></div>
+
+<div class="ui grid">
+  <% @charts.each do |chart| %>
+    <div class="sixteen wide mobile eight wide tablet four wide computer column">
+      <div class="ui card">
+
+        <div class="content">
+          <%= link_to "Top 100: " + chart.name, chart_path(chart) %>
+        </div>
+        <div class="extra content">
+          <div class="ui two buttons">
+            <div class="ui primary basic button">
+              <%= link_to 'Edit', edit_chart_path(chart) %>
+            </div>
+            <div class="ui basic negative button">
+              <%= link_to 'Destroy', chart, method: :delete, data: { confirm: 'Are you Sure?' } %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+<div class="ui divider"></div>
+<button class="ui button fluid"><%= link_to 'New Chart', new_chart_path %></button>
+</div>
