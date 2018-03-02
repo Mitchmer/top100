@@ -10,9 +10,8 @@
     <br />
     <div class="field">
     <%= f.label :genre %>
-     <%= f.collection_select :genre, Song.all, :genre, :genre, prompt: true %>
+    <%= f.collection_select :genre, Chart.all, :name, :name, prompt: true %>
  
-    <%= f.text_field :genre %> 
   </div>
     <br />
     <div class="field">
