@@ -66,7 +66,7 @@ class SongsController < ApplicationController
 
     def song_params
       
-      params.require(:song).permit(:title, :sales)
+      params.require(:song).permit(:title, :sales, :genre)
 
     end
 >>>>>>> create song controller
