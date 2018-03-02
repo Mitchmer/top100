@@ -11,8 +11,8 @@ class SongsController < ApplicationController
   end
 
   def new
-    @song = Artist.Song.new
-    render partial: "form"
+    @song = Song.new
+    render partial: "songs/form"
   end
 
   def edit

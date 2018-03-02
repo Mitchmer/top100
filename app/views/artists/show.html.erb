@@ -6,8 +6,13 @@
 <div class="ui primary basic button">
   <%= link_to 'Edit Artist', edit_artist_path(@artist) %>
 </div>
-<div class="ui negative basic button">
 
+
+<div class = 'ui primary basic button'>
+   <%= link_to 'Add new song', new_artist_song_path(@artist) %>
+</div>
+
+<div class="ui negative basic button">
   <%= link_to 'Delete Artist', @artist, method: :delete %>
 </div>
 
