@@ -11,6 +11,11 @@
     <%= f.collection_select :genre %>
   </div>
     <br />
+    <div class="field">
+    <% f.label :sales %>
+    <%= f.text_field :sales %>
+    </div>
+    <br />
   <div class="actions">
     <%= f.submit 'Disco', class: 'ui primary basic button ' %>
   </div>
