@@ -57,9 +57,19 @@ class SongsController < ApplicationController
   private
 
   def set_song 
-    {
+    
       @artist = Artist.find(params[:artist_id])
+<<<<<<< HEAD
     }
+=======
+  end
+
+    def song_params
+      
+      params.require(:song).permit(:title, :sales)
+
+    end
+>>>>>>> create song controller
 end
 
 #comment
