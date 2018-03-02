@@ -11,7 +11,7 @@ class SongsController < ApplicationController
   end
 
   def new
-    @song = @songs.new
+    @song = @songs.new(@song.artist_id)
     render partial: "form"
   end
 
@@ -22,7 +22,7 @@ class SongsController < ApplicationController
   def create
     @song = @artist.songs.new(song_params)
     if @song.save
-      redirect_to chart_artist_path(@chart.artist_id, @artist)
+      redirect_to chart_artist_path(@song.artist_id, @artist)
     else
       render :new
     end

@@ -1,0 +1,18 @@
+<div class="song">
+
+  <%= form_for @song do |f| %>
+  <div class="field">
+    <% f.label :title %>
+    <%= f.text_field :title, required: true, autofocus:true %>
+  </div>
+    <br />
+    <div class="field">
+    <% f.label :genre %>
+    <%= f.collection_select :genre %>
+  </div>
+    <br />
+  <div class="actions">
+    <%= f.submit 'Disco', class: 'ui primary basic button ' %>
+  </div>
+  <% end %>
+</div>
