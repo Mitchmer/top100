@@ -50,11 +50,7 @@ class SongsController < ApplicationController
 
   def destroy
     @song.destroy
-<<<<<<< HEAD
-    redirect_to atrist_songs_path
-=======
     redirect_to artists _songs_path
->>>>>>> add edit/delete for songs
   end
 
   private
