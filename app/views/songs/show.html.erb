@@ -8,3 +8,26 @@
 <p>Chart Id: <%= @song.chart_id %></p>
 
 </div>
+</div>
+<div class="artist">
+
+
+<hr /> <p>What would you like to do?</p>
+<br />
+<div class="ui primary basic button">
+  <%= link_to 'Edit Song', edit_artist_song_path(@song) %>
+</div>
+
+
+
+
+<div class="ui negative basic button">
+  <%= link_to 'Delete Song', @songs, method: :delete %>
+</div>
+
+<div class="ui primary basic button">
+
+  <%= link_to 'Back', songs_path%>
+</div>
+</div>
+

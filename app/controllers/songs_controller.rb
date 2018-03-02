@@ -7,16 +7,28 @@ class SongsController < ApplicationController
   end
 
   def show
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> add edit/delete for songs
   end
 
   def new
     @song = Song.new
+<<<<<<< HEAD
 
   end
 
   def edit
     
+=======
+    render partial: "songs/form"
+  end
+
+  def edit
+    render partial: "form"
+>>>>>>> add edit/delete for songs
   end
 
   def create
@@ -38,7 +50,11 @@ class SongsController < ApplicationController
 
   def destroy
     @song.destroy
+<<<<<<< HEAD
     redirect_to atrist_songs_path
+=======
+    redirect_to artists _songs_path
+>>>>>>> add edit/delete for songs
   end
 
   private
