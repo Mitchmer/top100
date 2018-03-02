@@ -7,16 +7,16 @@ class SongsController < ApplicationController
   end
 
   def show
-    
+
   end
 
   def new
     @song = Song.new
-    render partial: "songs/form"
+
   end
 
   def edit
-    render partial: "form"
+    
   end
 
   def create
@@ -54,7 +54,7 @@ class SongsController < ApplicationController
     params.require(:song).permit(:title, :sales, :genre)
   end
 
-  
+
 end
 
 #comment

@@ -1,5 +1,5 @@
-#song form
-<div class="song">
+
+<div class="artist">
 
   <%= form_for [@artist, @song] do |f| %>
   <h3> Artist Name here</h3>
@@ -10,8 +10,8 @@
     <br />
     <div class="field">
     <%= f.label :genre %>
-    <%= f.collection_select :genre, Chart.all, :name, :name, prompt: true %>
- 
+     <%= f.collection_select :genre, Song.all, :genre, :genre, prompt: true %>
+
   </div>
     <br />
     <div class="field">
