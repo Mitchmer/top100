@@ -1,8 +1,24 @@
 <div class="artist">
-  <h1><%= @chart.name %></h1>
+  <h1>Top 100: <%= @chart.name %></h1>
 
   <button class="ui primary basic button"><%= link_to 'Edit', edit_chart_path(@chart) %></button>
   <button class="ui negative basic button"><%= link_to 'Delete', @chart, method: :delete %>
-  <button class="ui primary basic button"><%= link_to 'Back', charts_path %>
+  <button class="ui primary basic button"><%= link_to 'Back', charts_path %></button>
+  <br>
+
+
+  <div class="ui relaxed divided list">
+    <ul>
+      <% @chart.top_100.each do |song| %>
+        
+        <div class="item">
+          <div class="content">
+            <li class="header"><%= link_to song.title, songs_path(song.id) %>, by <%= song.get_artist %> (Sales: <%= song.sales %></li>
+          </div>
+        </div>
+      <% end %>
+    </ul>
+    </div>
+
 
 </div>
