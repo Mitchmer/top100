@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   root 'charts#index'
 
+  get '/songs', to: 'songs#index'
+  get '/songs/:id', to: 'song#show'
+
   resources :artists do
     resources :songs
   end
