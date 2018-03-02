@@ -2,7 +2,7 @@ class AccountsController < ApplicationController
   before_action :set_account, only: [:show, :edit, :update]
 
   def index
-    redirect_to charts_path 
+    redirect_to charts_path
   end
 
   def show
