@@ -7,28 +7,15 @@ class SongsController < ApplicationController
   end
 
   def show
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> add edit/delete for songs
   end
 
   def new
     @song = Song.new
-<<<<<<< HEAD
 
   end
 
   def edit
     
-=======
-    render partial: "songs/form"
-  end
-
-  def edit
-    render partial: "form"
->>>>>>> add edit/delete for songs
   end
 
   def create
