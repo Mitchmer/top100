@@ -1,5 +1,5 @@
 class SongsController < ApplicationController
-  before_action :set_artist, except: [:index] # Reid put the except part in. Remove if it's broken.
+  before_action :set_artist, except: [:index, :show] # Reid put the except part in. Remove if it's broken.
   before_action :set_song, only: [:show, :edit, :update, :destroy]
 
   def index

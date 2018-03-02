@@ -13,7 +13,7 @@
     <% @songs.each do |song| %>
     <div class="item">
       <div class="content">
-        <li class="header"><%= link_to song.title, songs_path(song.id) %></li>
+        <li class="header"><%= link_to song.title, songs_path + '/' + song.id.to_s %></li>
       </div>
     </div>
   <% end %>

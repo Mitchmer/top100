@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'charts#index'
 
   get '/songs', to: 'songs#index'
-  get '/songs/:id', to: 'song#show'
+  get '/songs/:id', to: 'songs#show'
 
   resources :artists do
     resources :songs
