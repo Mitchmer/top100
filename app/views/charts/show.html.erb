@@ -1,4 +1,8 @@
-<h1><%= @chart.name %></h1>
-<%= link_to 'Edit', edit_chart_path(@chart) %>
-<%= link_to 'Delete', @chart, method: :delete %>
-<%= link_to 'Back', charts_path %>
+<div class="artist">
+  <h1><%= @chart.name %></h1>
+
+  <button class="ui primary basic button"><%= link_to 'Edit', edit_chart_path(@chart) %></button>
+  <button class="ui negative basic button"><%= link_to 'Delete', @chart, method: :delete %>
+  <button class="ui primary basic button"><%= link_to 'Back', charts_path %>
+
+</div>
