@@ -3,3 +3,6 @@
 <% @charts.each do |chart| %>
   <%= link_to chart.name, chart_path(chart) %>
 <% end %>
+
+<hr />
+<button class="fluid"><%= link_to 'Create a new chart', new_chart_path %></button>
