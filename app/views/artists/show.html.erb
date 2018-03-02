@@ -3,9 +3,16 @@
 <h1><%= @artist.name %> </h1>
 <hr /> <p>What would you like to do?</p>
 <br />
-<%= link_to 'Edit Artist', edit_artist_path(@artist) %>
-<br />
-<%= link_to 'Delete Artist', @artist, method: :delete %>
-<br />
-<%= link_to 'Back', artists_path%>
+<div class="ui primary basic button">
+  <%= link_to 'Edit Artist', edit_artist_path(@artist) %>
+</div>
+<div class="ui negative basic button">
+
+  <%= link_to 'Delete Artist', @artist, method: :delete %>
+</div>
+
+<div class="ui primary basic button">
+
+  <%= link_to 'Back', artists_path%>
+</div>
 </div>
