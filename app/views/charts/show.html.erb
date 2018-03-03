@@ -10,7 +10,7 @@
   <table class="ui celled table">
     <thead>
       <tr>
-        <th>#</th>
+        <th class="right aligned">#</th>
         <th>Song Title</th>
         <th>Artist</th>
         <th>Sales</th>
@@ -19,7 +19,7 @@
     <tbody>
       <% @chart.top_100.each_with_index do |song, i| %>
         <tr>
-          <td><%= i+1 %></td>
+          <td class="right aligned"><%= i+1 %></td>
           <td><%= link_to song.title, songs_path(song.id) %></td>
           <td><%= link_to song.get_artist, artist_path(song.artist_id) %></td>
           <td><%= song.sales %></td>
