@@ -13,7 +13,7 @@
         
         <div class="item">
           <div class="content">
-            <li class="header"><%= link_to song.title, songs_path(song.id) %>, by <%= song.get_artist %> (Sales: <%= song.sales %>)</li>
+            <li class="header"><%= link_to song.title, songs_path(song.id) %>, by <%= link_to song.get_artist, artist_path(song.artist_id) %> (Sales: <%= song.sales %>)</li>
           </div>
         </div>
       <% end %>
