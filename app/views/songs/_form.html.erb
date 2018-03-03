@@ -10,7 +10,11 @@
     <br />
     <div class="field">
     <%= f.label :genre %>
-     <%= f.collection_select :genre, Chart.all, :name, :name, prompt: true, required: true %>
+    <%= f.collection_select :genre, Chart.all, :name, :name, prompt: true, required: true %>
+    <br>
+    <br>
+    <%= f.label :artist %>
+    <%= f.collection_select :artist_id, Artist.all, :id, :name, prompt: true, required: true %>
 
   </div>
     <br />

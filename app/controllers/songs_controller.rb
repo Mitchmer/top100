@@ -1,5 +1,5 @@
 class SongsController < ApplicationController
-  before_action :set_artist, except: [:index, :show] # Reid put the except part in. Remove if it's broken.
+  before_action :set_artist, except: [:index, :show, :new, :create] # Reid put the except part in. Remove if it's broken.
   before_action :set_song, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -19,11 +19,16 @@ class SongsController < ApplicationController
   end
 
   def create
-    @song = @artist.songs.new(song_params)
-    if @song.save
-      redirect_to [@artist, @song]
+    if @artist == nil
+      Song.create(song_params)
+      redirect_to songs_path
     else
-      render :new
+      @song = @artist.songs.new(song_params)
+      if @song.save
+        redirect_to [@artist, @song]
+      else
+        render :new
+      end
     end
   end
 
@@ -50,7 +55,7 @@ class SongsController < ApplicationController
   end
 
   def song_params
-    params.require(:song).permit(:title, :sales, :genre)
+    params.require(:song).permit(:title, :sales, :genre, :artist_id)
   end
 
 
